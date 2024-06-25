@@ -28,7 +28,7 @@ const SignupForm = ({ onClose }) => {
 
             const responseData = await response.json();
             console.log(responseData); // Verifica la respuesta del servidor
-            alert('Usuario registrado exitosamente');
+            console.log('Usuario registrado exitosamente');
             reset(); // Limpiar el formulario después de enviar los datos
             onClose(); // Cierra el formulario modal después del registro exitoso
 
@@ -45,7 +45,7 @@ const SignupForm = ({ onClose }) => {
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="mb-4">
                         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
-                            Nombre se Usuario
+                            Nombre y Apellido
                         </label>
                         <input
                             {...register('nombre', { required: 'El nombre es obligatorio' })}

@@ -159,6 +159,42 @@ app.post('/api/jobs', async (req, res) => {
 });
 
 
+//endpoint para actualizar los datos del usuario:
+// Ruta para obtener los datos del usuario
+app.get('/api/usuarios/:userId', async (req, res) => {
+    try {
+        const userId = req.params.userId;
+        const usuario = await RegistroUsuario.findById(userId);
+
+        if (!usuario) {
+            return res.status(404).json({ mensaje: 'Usuario no encontrado' });
+        }
+
+        res.status(200).json(usuario);
+    } catch (error) {
+        console.error('Error al obtener datos del usuario:', error);
+        res.status(500).json({ mensaje: 'Error en el servidor' });
+    }
+});
+
+// Ruta para actualizar los datos del usuario
+app.put('/api/usuarios/:userId', async (req, res) => {
+    try {
+        const userId = req.params.userId;
+        const updates = req.body;
+
+        const usuario = await RegistroUsuario.findByIdAndUpdate(userId, updates, { new: true });
+
+        if (!usuario) {
+            return res.status(404).json({ mensaje: 'Usuario no encontrado' });
+        }
+
+        res.status(200).json({ mensaje: 'Datos actualizados correctamente', usuario });
+    } catch (error) {
+        console.error('Error al actualizar datos del usuario:', error);
+        res.status(500).json({ mensaje: 'Error en el servidor' });
+    }
+});
 
 
 // Iniciar el servidor

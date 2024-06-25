@@ -1,4 +1,3 @@
-// src/models/user.js
 import bcrypt from 'bcryptjs';
 import mongoose from 'mongoose';
 
@@ -6,6 +5,13 @@ const usuarioSchema = new mongoose.Schema({
   nombre: String,
   email: { type: String, unique: true },
   password: String,
+  direccion: { type: String, default: '' },
+  localidad: { type: String, default: '' },
+  provincia: { type: String, default: '' },
+  pais: { type: String, default: '' },
+  nroTelefono: { type: String, default: '' },
+  edad: { type: Number, default: 0 },
+  biografia: { type: String, default: '' },
 });
 
 // Método para hashear la contraseña antes de guardar

@@ -33,7 +33,7 @@ const SigninForm = ({ onClose, onLoginSuccess }) => {
         
             const responseData = await response.json();
             console.log(responseData); // Verifica la respuesta del servidor
-            alert('Inicio de sesión exitoso');
+            console.log('Inicio de sesión exitoso');
             
             // Almacena el usuario en localStorage
             localStorage.setItem('currentUser', JSON.stringify(responseData));
