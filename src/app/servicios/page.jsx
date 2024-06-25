@@ -207,60 +207,80 @@ export default function Component() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {Array.isArray(filteredJobPostings) &&
-                  filteredJobPostings.map((posting) => (
-                    <div
-                      key={posting._id}
-                      className="bg-white colorblanco rounded-lg shadow-md p-6 flex flex-col items-start gap-4"
-                    >
-                      <h3 className="text-xl font-semibold">
-                        {posting.servicio}
-                      </h3>
-                      <div className="flex items-center gap-2">
-                        <span className="relative flex shrink-0 overflow-hidden rounded-full w-10 h-10 border">
-                          <img
-                            className="aspect-square h-full w-full"
-                            src="/placeholder-user.jpg"
-                            alt="User"
-                          />
-                        </span>
-                        <div>
-                          <div className="font-semibold">
-                            {posting.nombreApellido}
-                          </div>
-                          <div className="text-sm text-gray-500 dark:text-gray-400">
-                            {posting.servicio}
-                          </div>
-                        </div>
-                      </div>
-                      <div className="font-semibold">${posting.costo}</div>
-                      <div className="text-left">
-                        <p className="text-gray-500 dark:text-gray-400">
-                          {posting.descripcionTrabajo}
-                        </p>
-                      </div>
-                      <div className="text-sm text-gray-500 flex dark:text-gray-400">
-                        <svg
-                          className="w-4 h-4 mr-1"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-                          <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                        {posting.provincia}
-                      </div>
-                      <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-gray-950 dark:focus-visible:ring-gray-300 underline-offset-4 h-10 px-4 py-2 text-gray-900 dark:text-gray-50 hover:underline">
-                        Más información
-                      </button>
-                    </div>
-                  ))}
+  filteredJobPostings.map((posting) => (
+    <div
+      key={posting._id}
+      className="bg-white colorblanco rounded-lg shadow-md p-6 flex flex-col items-start gap-4"
+    >
+      <h3 className="text-xl font-semibold">
+        {posting.servicio}
+      </h3>
+      <div className="flex items-center gap-2">
+        <span className="relative flex shrink-0 overflow-hidden rounded-full w-10 h-10 border">
+          <img
+            className="aspect-square h-full w-full"
+            src="/placeholder-user.jpg"
+            alt="User"
+          />
+        </span>
+        <div>
+          <div className="font-semibold">
+            {posting.nombreApellido}
+          </div>
+          <div className="text-sm text-gray-500 dark:text-gray-400">
+            {posting.servicio}
+          </div>
+        </div>
+      </div>
+      <div className="font-semibold">${posting.costo}</div>
+      <div className="text-left">
+        <p className="text-gray-500 dark:text-gray-400">
+          {posting.descripcionTrabajo}
+        </p>
+      </div>
+      <div className="text-sm text-gray-500 flex dark:text-gray-400">
+        <svg
+          className="w-4 h-4 mr-1"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        {posting.provincia}
+      </div>
+      <div className="text-sm text-gray-500 flex dark:text-gray-400">
+        <svg
+          className="w-4 h-4 mr-1"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <path d="M12 2a10 10 0 0 1 10 10a10 10 0 0 1-10 10a10 10 0 0 1-10-10a10 10 0 0 1 10-10Z"></path>
+          <line x1="12" y1="8" x2="12" y2="12"></line>
+          <line x1="12" y1="16" x2="12.01" y2="16"></line>
+        </svg>
+        {"Telefono: "+posting.nroTelefono} {/* Agregar aquí el número de teléfono */}
+      </div>
+      <button className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-gray-950 dark:focus-visible:ring-gray-300 underline-offset-4 h-10 px-4 py-2 text-gray-900 dark:text-gray-50 hover:underline">
+        Más información
+      </button>
+    </div>
+  ))}
+
               </div>
             </div>
           </div>
