@@ -1,6 +1,18 @@
 # Home Services - Plataforma de Servicios del Hogar
 
 Plataforma web para contratar profesionales de servicios del hogar. Los usuarios pueden publicar ofertas de trabajo y buscar servicios como limpieza, electricistas, jardinería, plomería, entre otros.
+<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0;">
+  <img width="1057" height="1756" alt="image" src="https://github.com/user-attachments/assets/bb5d1614-48bc-4c31-994b-c9ea6b7c513e" />
+  <img width="1051" height="1304" alt="image" src="https://github.com/user-attachments/assets/dd04a34f-afb2-4f6f-b535-9a73cba97c44" />
+  <img width="1076" height="696" alt="image" src="https://github.com/user-attachments/assets/89c8eef5-541a-4f91-916d-ee6a4e50ba6d" />
+  <img width="1073" height="864" alt="image" src="https://github.com/user-attachments/assets/e535c285-ce6d-462f-9d4f-8156269ef2d6" />
+  <img width="1058" height="1199" alt="image" src="https://github.com/user-attachments/assets/03211f48-93fd-47ec-8f5c-3b836ef8c947" />
+</div>
+
+
+
+
+
 
 ## 🚀 Tecnologías
 
