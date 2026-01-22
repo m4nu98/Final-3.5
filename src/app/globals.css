@@ -1,0 +1,67 @@
+@tailwind components;
+@tailwind base;
+@tailwind utilities;
+
+:root {
+  --radius: 0.5rem;
+}
+
+body {
+  font-family: var(--font-archivo), sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-libre_franklin), sans-serif;
+}
+
+.text-xl{
+ color: rgb(0, 0, 0);
+}
+
+.tarjetas{background-color: #d5d5d517;}
+
+.boton{
+  background-color: #9999994d ;
+}
+
+.boton2{
+  background-color: #ffffff;
+}
+
+.centrar{    display: flex;
+  justify-content: center;
+}
+.colorazul{
+ border-color: #3b82f6 
+ ;
+ background-color: #3b82f6 ;
+ ;
+}
+
+.sectionmargeninferior{
+  margin-bottom:900px;
+}
+.aboutmargeninferior{
+  margin-bottom:206px;
+}
+.sectionservicio{
+  margin-bottom:2px;
+}
+.colorblanco{
+  background-color: rgba(223, 220, 220, 0.103);
+}
+
+.prueba{
+  background-color: aqua;
+}
+
+.sectionmisdatos{
+  margin-bottom: 100px;
+}
+
+.altura {
+  padding: 0;
+  max-height: 200px; /* Ajusta según sea necesario */
+  overflow-y: auto; 
+}
+
